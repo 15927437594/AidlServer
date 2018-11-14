@@ -1,4 +1,4 @@
-package cn.com.hwtc.aidlserver;
+package cn.com.hwtc.aidlserver.utils;
 
 /**
  * user:Created by jid on 2018/8/23 13:36:34.
