@@ -4,11 +4,10 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 import android.os.RemoteException;
-import android.support.annotation.Nullable;
 import android.util.Log;
 
-import cn.com.hwtc.aidlserver.utils.Calculate;
 import cn.com.hwtc.aidlserver.CalculateInterface;
+import cn.com.hwtc.aidlserver.utils.Calculate;
 
 /**
  * user:Created by jid on 2018/8/23 13:31:31.
@@ -35,7 +34,6 @@ public class CalculateService extends Service {
         return START_STICKY;
     }
 
-    @Nullable
     @Override
     public IBinder onBind(Intent intent) {
         return mIBinder;
@@ -43,7 +41,8 @@ public class CalculateService extends Service {
 
     private IBinder mIBinder = new CalculateInterface.Stub() {
         @Override
-        public void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat, double aDouble, String aString) throws RemoteException {
+        public void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat,
+                               double aDouble, String aString) throws RemoteException {
 
         }
 
